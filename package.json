@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "build": "npx tailwindcss build -i ./src/input.css -o ./dist/theme/main.css",
-    "dev": "npx tailwindcss -i ./src/input.css -o ../paracord/src/staticfiles/theme-dev/main.css --watch",
-    "watch": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "build": "npx tailwindcss build -i ./src/input.css -o ./dist/theme/paracord.min.css",
+    "dev": "npx tailwindcss -i ./src/input.css -o ../paracord/src/staticfiles/theme-dev/paracord.min.css --watch",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./src/paracord.min.css --minify --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.3",
