@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "npx tailwindcss build -i ./src/input.css -o ./dist/theme/main.css",
+    "dev": "npx tailwindcss -i ./src/input.css -o ../paracord/src/staticfiles/theme-dev/main.css --watch",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}
