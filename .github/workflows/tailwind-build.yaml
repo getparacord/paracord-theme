@@ -8,6 +8,7 @@ on:
       - src/**/*
       - package.json
       - tailwind.config.js
+      - .github/workflows/tailwind-build.yaml
   pull_request:
     branches:
       - main
