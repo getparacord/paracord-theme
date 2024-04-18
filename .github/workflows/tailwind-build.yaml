@@ -33,11 +33,10 @@ jobs:
 
     - name: Build CSS
       run: npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify
-
-    - name: Commit and Push
-      run: |
-        git config --global user.email "action@github.com"
-        git config --global user.name "GitHub Action"
-        git add ./dist/output.css
-        git commit -m "Update Tailwind CSS output" || echo "No changes to commit"
-        git push
+    
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v6
+      with:
+        add-paths: |
+          dist/*.css
+        commit-message: 'New theme build'
