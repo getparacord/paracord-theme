@@ -39,6 +39,11 @@ jobs:
         repository: 'getparacord/paracord'
         token: ${{ secrets.PARACORD_REPO_TOKEN }}
         path: 'paracord'
+    
+    - name: List files
+      run: |
+        npm install -g glob
+        node src/list_files.js
 
     - name: Build CSS
       run: npm run build
