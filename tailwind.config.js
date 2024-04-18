@@ -4,6 +4,7 @@ module.exports = {
     /* Local paracord Django project templates */
     "../paracord/**/*.{html,js}",
     "paracord/**/*.{html,js}",
+    "paracord-theme/**/*.{html,js}",
     /* Theme html files */
     'src/**/*.html',
      /**
