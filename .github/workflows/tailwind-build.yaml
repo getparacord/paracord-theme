@@ -33,8 +33,18 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
+    - name: Checkout Paracord Repo
+      uses: actions/checkout@v4
+      with:
+        repository: 'getparacord/paracord'
+        token: ${{ secrets.PARACORD_REPO_TOKEN }}
+        path: 'paracord'
+
     - name: Build CSS
       run: npm run build
+
+    - name: Remove Paracord Repo
+      run: rm -rf paracord
     
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v6
